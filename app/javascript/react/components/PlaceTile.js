@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Index = props => {
+const PlaceTile = props => {
   return(
     <ul>
       <li onClick={props.click}>{props.name}</li>
@@ -9,4 +9,4 @@ const Index = props => {
   )
 }
 
-export default Index;
+export default PlaceTile;
