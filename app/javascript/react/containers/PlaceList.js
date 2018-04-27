@@ -40,18 +40,18 @@ class PlaceList extends React.Component {
  render(){
    let places = this.state.places.map((place)=>{
      let placeDescrip;
-      if (place.id === this.state.placeSelected){
+     if (place.id === this.state.placeSelected){
         placeDescrip = place.description
       }
-
 
     let handle = () => {this.handleClick(place.id)}
 
      return(
        <PlaceTile
         key = {place.id}
+        id = {place.id}
         name = {place.name}
-        click = {handle}
+        onClick = {handle}
         description = {placeDescrip}
        />
      )
@@ -62,7 +62,10 @@ class PlaceList extends React.Component {
         <p>This is the category filtering section</p>
       </div>
       <div>
-        {places}
+        <h1>Places to Visit!</h1>
+        <ul>
+          {places}
+        </ul>
       </div>
     </div>
   )
