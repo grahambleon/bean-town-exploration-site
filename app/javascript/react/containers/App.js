@@ -10,7 +10,6 @@ const App = (props) => {
       <Route path='/' component={PlaceList} >
         <IndexRoute component={PlaceList} />
         <Route path='/PlaceList' component={PlaceList} />
-
       </Route>
     </Router>
   );

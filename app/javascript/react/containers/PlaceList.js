@@ -57,12 +57,18 @@ class PlaceList extends React.Component {
      )
    })
   return(
-    <div>
-      <div>
-        <p>This is the category filtering section</p>
+    <div className = "wrpPage">
+      <div className="indexCategory">
+        <h2>Categories</h2>
+        <ul>
+          <li className="btn">Historical Sites</li>
+          <li className="btn">Parks & Recreation</li>
+          <li className="btn">Museums</li>
+          <li className="btn">Sports</li>
+        </ul>
       </div>
-      <div>
-        <h1>Places to Visit!</h1>
+      <div className="indexlist">
+        <h2>Places to Visit!</h2>
         <ul>
           {places}
         </ul>

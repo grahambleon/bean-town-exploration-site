@@ -1,5 +1,4 @@
 import PlaceList from '../../../app/javascript/react/containers/PlaceList';
-// import PlaceTile from '../../../app/javascript/react/components/PlaceTile';
 import { mount } from 'enzyme';
 import React from 'react';
 import fetchMock from 'fetch-mock'
