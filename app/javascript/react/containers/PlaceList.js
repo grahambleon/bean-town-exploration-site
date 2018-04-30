@@ -67,11 +67,11 @@ class PlaceList extends React.Component {
           <li className="btn">Sports</li>
         </ul>
       </div>
-      // <div className="indexlist">
-      //   <h2>Places to Visit!</h2>
-      //   <ul>
-      //     {places}
-      //   </ul>
+      <div className="indexlist">
+        <h2>Places to Visit!</h2>
+        <ul>
+          {places}
+        </ul>
       </div>
     </div>
   )

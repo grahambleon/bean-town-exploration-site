@@ -8,11 +8,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-<<<<<<< HEAD
-  # config.secret_key = 'e8ab02322918dd10a71df63d5240d5c2275b99d1a733f426eacabe1ded9ee0a80bbfa3ec31d29f9c84a4c219c09938b987e6cd922f8ed4fa5059d165126625db'
-=======
   config.secret_key = 'e8ab02322918dd10a71df63d5240d5c2275b99d1a733f426eacabe1ded9ee0a80bbfa3ec31d29f9c84a4c219c09938b987e6cd922f8ed4fa5059d165126625db'
->>>>>>> master
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -276,7 +272,6 @@ Devise.setup do |config|
   # is mountable, there are some extra configurations to be taken into account.
   # The following options are available, assuming the engine is mounted as:
   #
-    config.secret_key = '159d7777f2f449d57a8ec5de1e58c028475518f058036126d1fa97403ee8ff056c788819e61f772bb5b8b44f3eda1fc5b85121b1c9b78efa51e261c108366590'
   #     mount MyEngine, at: '/my_engine'
   #
   # The router that invoked `devise_for`, in the example above, would be:
