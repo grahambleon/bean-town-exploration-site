@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, IndexRoute, Router, browserHistory } from 'react-router';
-
-import PlaceList from './PlaceList'
-import PlaceTile from '../components/PlaceTile'
+import PlaceList from './PlaceList';
+import PlaceTile from '../components/PlaceTile';
+import PlaceShowPage from './place-show-page';
 
 const App = (props) => {
   return (
@@ -13,6 +13,5 @@ const App = (props) => {
       </Route>
     </Router>
   );
-}
 
 export default App;
