@@ -13,5 +13,5 @@ const App = (props) => {
       </Route>
     </Router>
   );
-
+}
 export default App;
