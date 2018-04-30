@@ -15,14 +15,14 @@
  *= require foundation_and_overrides
  */
 
- body{
-   background: #edf1f4;
-   height:100%;
-   margin: 0;
-   padding:0;
+body{
+  background-image: url("images/boston_background_fade.png");
+  height:100%;
+  margin: 0;
+  padding:0;
  }
 
-.test{
+.head-bckg{
   background-image: url("images/boston_banner.png");
   background-repeat: no-repeat;
   width: auto;
@@ -30,6 +30,13 @@
   height: 400px;
 }
 
+.title_idex{
+  padding-top: 5%;
+  padding-left: 3%;
+  text-align: left;
+  color: #DFF1FD;
+  font-size: 50px;
+}
  .top-bar{
    background: #374e60;
  }
@@ -87,8 +94,9 @@ h2{
 
 .btn{
   text-align: center;
-  box-shadow: -3px 3px #537691, -2px 2px #537691, -1px 1px #537691;
-  background: #d3dce5;
+  font-size: 18px;
+  box-shadow: -5px 5px #243440, -5px 5px #243440;
+  background: #DFF1FD;
   list-style-type: none;
   border-radius: 50px;
   margin-bottom: 10%;
