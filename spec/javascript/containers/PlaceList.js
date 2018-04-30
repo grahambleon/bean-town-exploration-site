@@ -1,5 +1,4 @@
 import PlaceList from '../../../app/javascript/react/containers/PlaceList';
-// import PlaceTile from '../../../app/javascript/react/components/PlaceTile';
 import { mount } from 'enzyme';
 import React from 'react';
 import fetchMock from 'fetch-mock'
@@ -25,8 +24,7 @@ describe('PlaceList', () => {
 
   describe('listing', () => {
     it('renders a div', () => {
-      expect(wrapper.find('div')).toBePresent()
-      expect(wrapper.find('h1').text()).toEqual('Places to Visit!')
+      expect(wrapper.find('PlaceList').find('h2')).toBePresent('Places to Visit!')
     });
 
   });

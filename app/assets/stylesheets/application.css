@@ -13,5 +13,98 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
  */
+
+body{
+  background-image: url("images/boston_background_fade.png");
+  height:100%;
+  margin: 0;
+  padding:0;
+ }
+
+.head-bckg{
+  background-image: url("images/boston_banner.png");
+  background-repeat: no-repeat;
+  width: auto;
+  background-size: cover;
+  height: 400px;
+}
+
+.title_idex{
+  padding-top: 5%;
+  padding-left: 3%;
+  text-align: left;
+  color: #DFF1FD;
+  font-size: 50px;
+}
+ .top-bar{
+   background: #374e60;
+ }
+
+h1, h2, h3, h4, p, li{
+  font-family: 'Raleway', sans-serif, 'Roboto Mono', monospace;
+}
+
+h1{
+  color: #9d0000;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#home-btn{
+  text-align: right;
+}
+
+h2{
+  text-align: center;
+  color: #9d0000;
+  font-weight: bold;
+}
+
+.placeTile {
+  margin: 20px;
+  width: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+  box-shadow: -5px 5px #243440, -5px 5px #243440;
+  list-style-type: none;
+  display: block;
+  background: #537691;
+}
+
+#placeTileName {
+  color: #edf1f4
+}
+
+#placeTileDescp{
+  color: #edf1f4;
+  font-size: 20px;
+}
+
+.indexCategory{
+  float: left;
+  width: 20%;
+  padding-right: 30px;
+  background: #537691;
+  height: 100%;
+  position: absolute;
+}
+
+.btn{
+  text-align: center;
+  font-size: 18px;
+  box-shadow: -5px 5px #243440, -5px 5px #243440;
+  background: #DFF1FD;
+  list-style-type: none;
+  border-radius: 50px;
+  margin-bottom: 10%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+
+.indexlist{
+  float: right;
+  width: 70%;
+}
