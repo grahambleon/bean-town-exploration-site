@@ -5,16 +5,10 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-<<<<<<< HEAD
-      resources :places
-    end
-  end
-=======
       resources :places do
         resources :reviews
-      end 
+      end
     end
   end
 
->>>>>>> c22b595e8485378a2da2b37d08b73228fb6601f9
 end
