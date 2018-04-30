@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_04_27_130837) do
+=======
+ActiveRecord::Schema.define(version: 2018_04_26_135932) do
+>>>>>>> c22b595e8485378a2da2b37d08b73228fb6601f9
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +33,21 @@ ActiveRecord::Schema.define(version: 2018_04_27_130837) do
     t.index ["user_id"], name: "index_places_on_user_id"
   end
 
+<<<<<<< HEAD
+=======
+  create_table "reviews", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "body", null: false
+    t.integer "rating", null: false
+    t.bigint "place_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["place_id"], name: "index_reviews_on_place_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
+>>>>>>> c22b595e8485378a2da2b37d08b73228fb6601f9
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -42,11 +61,16 @@ ActiveRecord::Schema.define(version: 2018_04_27_130837) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.string "username", null: false
     t.boolean "is_admin", default: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
+=======
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+>>>>>>> c22b595e8485378a2da2b37d08b73228fb6601f9
   end
 
 end
