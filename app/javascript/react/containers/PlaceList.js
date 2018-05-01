@@ -57,8 +57,8 @@ class PlaceList extends React.Component {
      )
    })
   return(
-    <div className = "wrpPage">
-      <div className="indexCategory">
+    <div className = "wrp-page">
+      <div className="index-category">
         <h2>Categories</h2>
         <ul>
           <li className="btn">Historical Sites</li>
@@ -67,7 +67,7 @@ class PlaceList extends React.Component {
           <li className="btn">Sports</li>
         </ul>
       </div>
-      <div className="indexlist">
+      <div className="index-list">
         <h2>Places to Visit!</h2>
         <ul>
           {places}

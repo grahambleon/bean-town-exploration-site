@@ -24,19 +24,11 @@ describe('PlaceTile', () => {
   });
 
   it('should render a li tag with the specific props', () => {
-    // console.log(wrapper.debug)
-    // debugger;
-    expect(wrapper.find('h2').text()).toEqual("Testname");
+    expect(wrapper.find('li').find('h3').text()).toEqual("Testname");
   });
-
-  it('should render a p tag with the specific props', () => {
-    expect(wrapper.find('p').text()).toEqual("Test Descrip")
-  })
 
   it('should invoke the onClick function from props when clicked', () => {
     wrapper.find('li').simulate('click');
-    // console.log(wrapper.debug)
-    // debugger;
     expect(onClick).toHaveBeenCalled();
   });
 
