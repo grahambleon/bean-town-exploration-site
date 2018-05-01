@@ -10,27 +10,14 @@ class FormContainer extends Component {
     super(props)
     this.state = {
       reviewTitle: '',
-      reviewRating: '',
+      reviewRating: '1',
       reviewBody: ''
     }
+    this.handleFormSubmit = this.handleFormSubmit.bind(this)
     this.handleBody = this.handleBody.bind(this);
     this.handleRating = this.handleRating.bind(this);
     this.handleTitle = this.handleTitle.bind(this);
     this.handleClear = this.handleClear.bind(this);
-  }
-
-
-  handleFormSubmit(event) {
-    event.preventDefault()
-    let formPayload = {
-      title: this.state.reviewTitle,
-      body: this.state.reviewBody,
-      rating: this.state.reviewRating,
-      place_id: this.props.params.id,
-      user_id: current_user
-    }
-    this.props.addNewReview(formPayload)
-    handleClear()
   }
 
   handleTitle(event) {
@@ -51,17 +38,25 @@ class FormContainer extends Component {
   handleClear() {
     this.setState ({
       reviewTitle: '',
-      reviewRating: '',
+      reviewRating: '1',
       reviewBody: ''
     })
   }
 
-  
-
+  handleFormSubmit(event) {
+    event.preventDefault()
+    let formPayload = {
+      title: this.state.reviewTitle,
+      body: this.state.reviewBody,
+      rating: this.state.reviewRating,
+      place_id: this.props.placeId,
+      user_id: this.props.userId
+    }
+    this.props.addNewReview(formPayload)
+    this.handleClear()
+  }
 
   render() {
-
-
     return(
       <form className="form" onSubmit={this.handleFormSubmit}>
         <TitleField

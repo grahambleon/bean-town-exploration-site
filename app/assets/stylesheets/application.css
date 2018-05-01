@@ -30,7 +30,7 @@ body{
   height: 400px;
 }
 
-.title_idex{
+.title-index{
   padding-top: 5%;
   padding-left: 3%;
   text-align: left;
@@ -62,7 +62,7 @@ h2{
   font-weight: bold;
 }
 
-.placeTile {
+.place-tile {
   margin: 20px;
   width: auto;
   padding-left: 10%;
@@ -74,16 +74,16 @@ h2{
   background: #537691;
 }
 
-#placeTileName {
+#place-tile-name {
   color: #edf1f4
 }
 
-#placeTileDescp{
+#place-tile-descp{
   color: #edf1f4;
   font-size: 20px;
 }
 
-.indexCategory{
+.index-category{
   float: left;
   width: 20%;
   padding-right: 30px;
@@ -104,7 +104,7 @@ h2{
   padding-bottom: 2%;
 }
 
-.indexlist{
+.index-list{
   float: right;
   width: 70%;
 }
