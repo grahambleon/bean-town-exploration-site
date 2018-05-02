@@ -79,6 +79,14 @@ h2{
   background: #537691;
 }
 
+#username {
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
 #placeTileName {
   color: #edf1f4
 }
