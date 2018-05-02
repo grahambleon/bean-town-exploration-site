@@ -56,6 +56,11 @@ h1{
   text-align: right;
 }
 
+#flash{
+  background: #374e60;
+  color: #DFF1FD;
+}
+
 h2{
   text-align: center;
   color: #9d0000;
@@ -74,7 +79,15 @@ h2{
   background: #537691;
 }
 
-#place-tile-name {
+#username {
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+#placeTileName {
   color: #edf1f4
 }
 
