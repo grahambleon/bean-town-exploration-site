@@ -15,8 +15,6 @@ describe('Review', () => {
   })
 
   it('renders the pertinant review data to the page', () => {
-    console.log(wrapper.debug)
-    debugger;
     expect(wrapper.find(Review).props()).toEqual( {
        title: 'This sucks!',
        rating: '1',
