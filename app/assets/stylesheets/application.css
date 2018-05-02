@@ -56,6 +56,11 @@ h1{
   text-align: right;
 }
 
+#flash{
+  background: #374e60;
+  color: #DFF1FD;
+}
+
 h2{
   text-align: center;
   color: #9d0000;
@@ -72,6 +77,14 @@ h2{
   list-style-type: none;
   display: block;
   background: #537691;
+}
+
+#username {
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  padding-left: 5px;
+  font-size: 14px;
 }
 
 #placeTileName {
