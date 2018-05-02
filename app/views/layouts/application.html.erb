@@ -27,12 +27,16 @@
     <ul class="title-area">
       <li class="name">
         <p><a href="/">Home</a></p>
-        <h1><a href="/">Explore Boston</a></h1>
       </li>
     </ul>
 
     <section class="top-bar-section">
       <ul class="right">
+        <%- flash.each do |key, value| -%>
+          <li id="flash" class="flash flash-<%= key %>">
+            <%= value %>
+          </li>
+        <%- end -%>
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
         <%- else -%>
@@ -42,12 +46,6 @@
       </ul>
     </section>
   </nav>
-
-  <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
-      <%= value %>
-    </div>
-  <%- end -%>
 
   <%= yield %>
 
