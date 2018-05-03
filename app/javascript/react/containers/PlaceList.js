@@ -1,5 +1,6 @@
 import React from 'react';
 import PlaceTile from '../components/PlaceTile';
+import PlaceInfo from '../components/placeInfo';
 
 class PlaceList extends React.Component {
   constructor(props){
@@ -51,24 +52,28 @@ class PlaceList extends React.Component {
   }
 
  render(){
-   console.log(this.state.placesShown);
-   console.log(this.state.places);
    let places = this.state.placesShown.map((place)=>{
-     let placeDescrip;
+     let placeDescrip, placeId, placeLink;
+
      if (place.id === this.state.placeSelected){
         placeDescrip = place.description
+        placeId = place.id
+        placeLink = `Click here for reviews and more details on ${place.name}.`
       }
-
     let handle = () => {this.handleClick(place.id)}
 
      return(
-       <PlaceTile
-        key = {place.id}
-        id = {place.id}
-        name = {place.name}
-        onClick = {handle}
-        description = {placeDescrip}
-       />
+       <div className="place-tile" key = {place.id}>
+         <PlaceTile
+          name = {place.name}
+          onClick = {handle}
+         />
+         <PlaceInfo
+           description={placeDescrip}
+           id={placeId}
+           link={placeLink}
+          />
+       </div>
      )
    })
   return(
