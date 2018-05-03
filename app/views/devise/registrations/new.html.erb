@@ -1,11 +1,11 @@
-<div class="form">
+<div class="form-field">
   <h2>Sign up</h2>
 
   <%=  form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
 
     <div class="field">
-      <span id="name-field"><%= f.label :username %><br /></span>
+      <%= f.label :username %><br />
       <%= f.text_field :username, autocomplete: "username" %>
     </div>
 
