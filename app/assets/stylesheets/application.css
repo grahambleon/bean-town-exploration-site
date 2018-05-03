@@ -89,7 +89,9 @@ h2{
   margin-left: 180px;
   margin-right: 180px;
   width: auto;
-  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: left;
   box-shadow: -5px 5px #243440, -5px 5px #243440;
   list-style-type: none;
   display: block;
@@ -143,6 +145,11 @@ h2{
   color: #ffffff;
 }
 
+.btn:active{
+  color: purple;
+  background-color: #7bb0ce;
+}
+
 .index-list{
   float: right;
   width: 80%;
@@ -181,4 +188,29 @@ ul{
   margin-right: 3%;
   padding: 3%;
   background-color: rgba(55, 78, 96, 0.5)
+}
+
+.form-field {
+  width: 890px;
+  height: 820px;
+  margin-top: 150px;
+  margin-left: 480px;
+  border-radius: 30px;
+  text-align: center;
+  background-color: #DFF1FD;
+  font-size: 12px;
+}
+
+label{
+  font-size: 1.5rem;
+  color: black;
+}
+
+input {
+font-size: 28px;
+border-radius: 10px;
+}
+
+#error_explanation ul li{
+list-style-type: none;
 }

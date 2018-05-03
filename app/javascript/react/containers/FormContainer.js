@@ -58,7 +58,7 @@ class FormContainer extends Component {
 
   render() {
     return(
-      <form className="form" onSubmit={this.handleFormSubmit}>
+      <form className="review-form" onSubmit={this.handleFormSubmit}>
         <TitleField
           label="Review Title"
           title={this.state.reviewTitle}
