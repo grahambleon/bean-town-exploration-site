@@ -16,14 +16,14 @@
  */
 
 body{
-  background-image: url(<%= asset_path 'boston_background_fade.png' %>);
+  background-image: url("images/boston_background_fade.png");
   height:100%;
   margin: 0;
   padding:0;
  }
 
 .head-bckg{
-  background-image: url(<%= asset_path 'boston_banner.png' %>);
+  background-image: url("images/boston_banner.png");
   background-repeat: no-repeat;
   width: auto;
   background-size: cover;
