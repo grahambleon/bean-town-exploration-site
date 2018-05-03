@@ -66,9 +66,6 @@ class PlaceShowPage extends Component {
   }
 
   render () {
-
-    console.log(this.state)
-
     let reviews = this.state.reviews.map((review) => {
       return(
         <Review

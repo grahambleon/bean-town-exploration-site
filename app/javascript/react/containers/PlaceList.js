@@ -63,7 +63,7 @@ class PlaceList extends React.Component {
     let handle = () => {this.handleClick(place.id)}
 
      return(
-       <div className="place-tile" key = {place.id}>
+       <div className="place-tile-items" key = {place.id}>
          <PlaceTile
           name = {place.name}
           onClick = {handle}
