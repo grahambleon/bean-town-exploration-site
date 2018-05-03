@@ -5,9 +5,9 @@ class PlaceList extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      shownPlaces: []
       places: [],
-      placeSelected: null
+      placeSelected: null,
+      placesShown: []
     }
 
   this.handleClick = this.handleClick.bind(this)
@@ -38,10 +38,6 @@ class PlaceList extends React.Component {
     }
   }
 
-  sortByCategory(event){
-    let selectedCategory = this.state.
-  }
-
  render(){
    let places = this.state.places.map((place)=>{
      let placeDescrip;
@@ -62,9 +58,8 @@ class PlaceList extends React.Component {
      )
    })
   return(
-    <div className = "wrpPage">
-      <div className="indexCategory">
-        <h2></h2>
+    <div className = "wrp-page">
+      <div className="index-category">
         <h2>Categories</h2>
         <ul>
           <li className="btn">Historical Sites</li>
@@ -73,7 +68,7 @@ class PlaceList extends React.Component {
           <li className="btn">Sports</li>
         </ul>
       </div>
-      <div className="indexlist">
+      <div className="index-list">
         <h2>Places to Visit!</h2>
         <ul>
           {places}
