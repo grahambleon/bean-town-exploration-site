@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :places
-
+    resources :places, only: [:new, :create] do
+  end
 end
