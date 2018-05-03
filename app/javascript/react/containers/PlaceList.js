@@ -53,6 +53,7 @@ class PlaceList extends React.Component {
         name = {place.name}
         onClick = {handle}
         description = {placeDescrip}
+        photo={place.avatar}
        />
      )
    })
@@ -69,7 +70,7 @@ class PlaceList extends React.Component {
       </div>
       <div className="index-list">
         <h2>Places to Visit!</h2>
-        <ul>
+        <ul className="place-tile">
           {places}
         </ul>
       </div>

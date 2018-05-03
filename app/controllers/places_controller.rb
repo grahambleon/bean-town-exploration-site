@@ -1,6 +1,9 @@
 class PlacesController < ApplicationController
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+
+
+
   def new
     @place = Place.new
   end
@@ -22,9 +25,16 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
   end
 
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:place, :avatar)
+  end
+
+
   private
 
   def place_params
-    params.require(:place).permit(:name, :street_address, :city, :zip, :description, :category, {avatar: []})
+    params.require(:place).permit(:name, :street_address, :city, :zip, :description, :category, :avatar)
   end
 end

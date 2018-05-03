@@ -20,6 +20,7 @@
   <%= f.label :category, 'Category' %>
 	<%= f.select(:category, options_for_select([[' ', ' '], ['Historical Sites', '1'], ['Parks & Recreation', '2'], ['Museums', '3'], ['Sports', '4']] ))  %>
 
+	<%= f.label :avatar %>
 	<%= f.file_field :avatar %>
 
 	<%= f.submit 'Add Place!' %>

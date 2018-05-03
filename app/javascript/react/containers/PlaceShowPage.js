@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Review from '../components/review';
 import FormContainer from './FormContainer';
+import Dropzone from 'react-dropzone'
+
 
 class PlaceShowPage extends Component {
   constructor(props) {
@@ -9,9 +11,11 @@ class PlaceShowPage extends Component {
       place: {},
       reviews: [],
       userId: '',
-      placeId: this.props.params.id
+      placeId: this.props.params.id,
+      file: []
     }
     this.addNewReview = this.addNewReview.bind(this);
+    this.onDrop = this.onDrop.bind(this);
   }
 
   componentDidMount() {
@@ -55,7 +59,16 @@ class PlaceShowPage extends Component {
     })
   }
 
+
+  onDrop(event) {
+    let newAvatar = event.target.value
+      this.setState({ file: newAvatar })
+  }
+
   render () {
+
+    console.log(this.state)
+
     let reviews = this.state.reviews.map((review) => {
       return(
         <Review
@@ -68,21 +81,31 @@ class PlaceShowPage extends Component {
       )
     })
 
+    let photos;
+
+    if(this.state.place.avatar) {
+      photos = <img src={this.state.place.avatar.url} />
+    }
+
     return(
       <div>
         <h2>{this.state.place.name}</h2>
-        <div className="address">
-          <li>{this.state.place.street_address}</li>
-          <li>{this.state.place.city}, MA</li>
-          <li>{this.state.place.zip}</li>
+        <div className="clearfix">
+          <div className="photos clearfix">
+            <p>{photos}</p>
+          </div>
+          <div className="place-info">
+            <ul>
+              <li className="address">Location:</li>
+              <li>{this.state.place.street_address}, {this.state.place.city}, MA {this.state.place.zip}</li>
+              <li className="description">Description:</li>
+              <li>{this.state.place.description}</li>
+            </ul>
+          </div>
         </div>
-        <p className="description">
-          {this.state.place.description}
-        </p>
-
         <div className="submitted-reviews">
+        <h3>Reviews:</h3>
           {reviews}
-        </div>
 
         <FormContainer
           addNewReview={this.addNewReview}
@@ -90,6 +113,7 @@ class PlaceShowPage extends Component {
           userId={this.state.userId}
         />
       </div>
+    </div>
     )
   }
 }
