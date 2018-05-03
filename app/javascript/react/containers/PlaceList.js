@@ -40,7 +40,7 @@ class PlaceList extends React.Component {
       this.setState({placeSelected: null})
     }
   }
-// sort places by category event.target.value should correspond to the category in the database
+
   sortPlaces(event){
     let selectedCategory = this.state.places.filter((place) => {
       return (
