@@ -5,7 +5,7 @@
     <%= devise_error_messages! %>
 
     <div class="field">
-      <%= f.label :username %><br />
+      <span id="name-field"><%= f.label :username %><br /></span>
       <%= f.text_field :username, autocomplete: "username" %>
     </div>
 
@@ -27,9 +27,9 @@
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
 
-    <div class="actions">
+    <div id="actions">
       <%= f.submit "Sign up" %>
     </div>
   <% end %>
-</div>
 <%= render "devise/shared/links" %>
+</div>
