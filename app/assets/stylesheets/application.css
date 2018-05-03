@@ -126,3 +126,28 @@ h2{
   float: right;
   width: 70%;
 }
+
+.form-field {
+  width: 890px;
+  height: 820px;
+  margin-top: 150px;
+  margin-left: 480px;
+  border-radius: 30px;
+  text-align: center;
+  background-color: #DFF1FD;
+  font-size: 12px;
+}
+
+label{
+  font-size: 1.5rem;
+  color: black;
+}
+
+input {
+font-size: 28px;
+border-radius: 10px;
+}
+
+#error_explanation ul li{
+list-style-type: none;
+}
