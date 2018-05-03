@@ -76,13 +76,6 @@ h2{
   text-shadow: 4px 3px 0px #f5e5e5;
 }
 
-.place-tile{
-  width: auto;
-  margin-left: 5%;
-  margin-right: 5%;
-  opacity: 0.9
-}
-
 .place-tile-items {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -191,13 +184,12 @@ ul{
 }
 
 .form-field {
-  width: 890px;
-  height: 820px;
-  margin-top: 150px;
-  margin-left: 480px;
+  width: auto;
+  margin: 5% 15%;
+  padding: 2% 5%;
   border-radius: 30px;
   text-align: center;
-  background-color: #DFF1FD;
+  background-color: rgba(223, 241, 253, 0.6);
   font-size: 12px;
 }
 
