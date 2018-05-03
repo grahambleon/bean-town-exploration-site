@@ -30,7 +30,7 @@ body{
   height: 400px;
 }
 
-.title_idex{
+.title-index{
   padding-top: 5%;
   padding-left: 3%;
   text-align: left;
@@ -56,13 +56,18 @@ h1{
   text-align: right;
 }
 
+#flash{
+  background: #374e60;
+  color: #DFF1FD;
+}
+
 h2{
   text-align: center;
   color: #9d0000;
   font-weight: bold;
 }
 
-.placeTile {
+.place-tile {
   margin: 20px;
   width: auto;
   padding-left: 10%;
@@ -74,16 +79,24 @@ h2{
   background: #537691;
 }
 
+#username {
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
 #placeTileName {
   color: #edf1f4
 }
 
-#placeTileDescp{
+#place-tile-descp{
   color: #edf1f4;
   font-size: 20px;
 }
 
-.indexCategory{
+.index-category{
   float: left;
   width: 20%;
   padding-right: 30px;
@@ -104,7 +117,12 @@ h2{
   padding-bottom: 2%;
 }
 
-.indexlist{
+.btn:hover{
+  background-color: #abd8f2;
+  color: #ffffff;
+}
+
+.index-list{
   float: right;
   width: 70%;
 }

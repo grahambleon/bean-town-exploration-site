@@ -1,0 +1,26 @@
+<h1>Add A New Place!</h1>
+
+	<%= form_for (@place) do |f| %>
+
+	<%= f.label :name, 'Name' %>
+	<%= f.text_field :name %>
+
+	<%= f.label :street_address, 'Street Address' %>
+	<%= f.text_field :street_address %>
+
+	<%= f.label :city, 'City' %>
+	<%= f.text_field :city %>
+
+	<%= f.label :zip, 'Zip' %>
+	<%= f.text_field :zip %>
+
+	<%= f.label :description, 'Description' %>
+	<%= f.text_field :description %>
+
+  <%= f.label :category, 'Category' %>
+	<%= f.select(:category, options_for_select([[' ', ' '], ['Historical Sites', '1'], ['Parks & Recreation', '2'], ['Museums', '3'], ['Sports', '4']] ))  %>
+
+	<%= f.file_field :avatar %>
+
+	<%= f.submit 'Add Place!' %>
+	<% end  %>

@@ -20,20 +20,26 @@
 </head>
 <body>
   <header class="head-bckg">
-    <h1 class="title_idex">Boston Explorer</h1>
+    <h1 class="title-index">Boston Explorer</h1>
   </header>
 
   <nav class="top-bar">
     <ul class="title-area">
       <li class="name">
         <p><a href="/">Home</a></p>
-        <h1><a href="/">Explore Boston</a></h1>
       </li>
     </ul>
 
     <section class="top-bar-section">
       <ul class="right">
+        <%- flash.each do |key, value| -%>
+          <li id="flash" class="flash flash-<%= key %>">
+            <%= value %>
+          </li>
+        <%- end -%>
         <%- if current_user -%>
+          <li><%= link_to 'Add A Place Recommendation', new_place_path %></li>
+          <li id="username" class="name">Currently signed in as <%= current_user.username %></li>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
         <%- else -%>
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
@@ -42,12 +48,6 @@
       </ul>
     </section>
   </nav>
-
-  <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
-      <%= value %>
-    </div>
-  <%- end -%>
 
   <%= yield %>
 

@@ -11,4 +11,6 @@ Rails.application.routes.draw do
     end
   end
 
+    resources :places, only: [:new, :create, :show] do
+  end
 end
