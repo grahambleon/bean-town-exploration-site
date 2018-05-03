@@ -6,9 +6,10 @@ class PlaceList extends React.Component {
     super(props);
     this.state = {
       places: [],
-      placeSelected: null
+      placeSelected: null,
+      placesShown: []
     }
-
+  this.sortPlaces = this.sortPlaces.bind(this)
   this.handleClick = this.handleClick.bind(this)
   }
   componentDidMount() {
@@ -24,7 +25,10 @@ class PlaceList extends React.Component {
       })
       .then(response => response.json())
       .then(body => {
-        this.setState({ places: body });
+        this.setState({
+          places: body,
+          placesShown: body
+        });
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
     }
@@ -37,8 +41,19 @@ class PlaceList extends React.Component {
     }
   }
 
+  sortPlaces(event){
+    let selectedCategory = this.state.places.filter((place) => {
+      return (
+        parseInt(place.category) == event.target.value
+      )
+    })
+    this.setState({ placesShown: selectedCategory })
+  }
+
  render(){
-   let places = this.state.places.map((place)=>{
+   console.log(this.state.placesShown);
+   console.log(this.state.places);
+   let places = this.state.placesShown.map((place)=>{
      let placeDescrip;
      if (place.id === this.state.placeSelected){
         placeDescrip = place.description
@@ -61,10 +76,10 @@ class PlaceList extends React.Component {
       <div className="index-category">
         <h2>Categories</h2>
         <ul>
-          <li className="btn">Historical Sites</li>
-          <li className="btn">Parks & Recreation</li>
-          <li className="btn">Museums</li>
-          <li className="btn">Sports</li>
+          <li className="btn" value="1" onClick={this.sortPlaces}>Historical Sites</li>
+          <li className="btn" value="2" onClick={this.sortPlaces}>Parks & Recreation</li>
+          <li className="btn" value="3" onClick={this.sortPlaces}>Museums</li>
+          <li className="btn" value="4" onClick={this.sortPlaces}>Sports</li>
         </ul>
       </div>
       <div className="index-list">
