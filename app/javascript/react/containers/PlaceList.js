@@ -89,7 +89,7 @@ class PlaceList extends React.Component {
       </div>
       <div className="index-list">
         <h2>Places to Visit!</h2>
-        <ul>
+        <ul className="place-tile">
           {places}
         </ul>
       </div>

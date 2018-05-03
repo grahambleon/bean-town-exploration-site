@@ -76,7 +76,7 @@ class FormContainer extends Component {
         />
         <input className="button" type="submit" value="Submit" />
         <button className="button" type="button" onClick={this.handleClear}>Clear</button>
-    </form>
+      </form>
 
     )
   }
