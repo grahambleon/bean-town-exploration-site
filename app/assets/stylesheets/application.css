@@ -72,7 +72,7 @@ h2{
   width: auto;
   padding-left: 10%;
   padding-right: 10%;
-  text-align: center;
+  text-align: left;
   box-shadow: -5px 5px #243440, -5px 5px #243440;
   list-style-type: none;
   display: block;
@@ -120,6 +120,11 @@ h2{
 .btn:hover{
   background-color: #abd8f2;
   color: #ffffff;
+}
+
+.btn:active{
+  color: purple;
+  background-color: #7bb0ce;
 }
 
 .index-list{
