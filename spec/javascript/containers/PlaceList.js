@@ -37,7 +37,8 @@ describe('PlaceList', () => {
   it('should have the specified initial state', () => {
     expect(wrapper.state()).toEqual({
       places: [],
-      placeSelected: null
+      placeSelected: null,
+      placesShown: []
     });
   });
 
