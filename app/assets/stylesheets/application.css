@@ -117,7 +117,7 @@ h2{
   padding-bottom: 2%;
 }
 
-btn:hover{
+.btn:hover{
   background-color: #abd8f2;
   color: #ffffff;
 }
