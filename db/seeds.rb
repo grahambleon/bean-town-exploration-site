@@ -1,5 +1,5 @@
 User.create!([
-  {email: "klstateler@hotmail.com", encrypted_password: "$2a$11$LlJVxzNzkWPIPfgdGUVzT.wm98NkgUw1wG0D5UzCdqhLIeiHdL7pq", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 2, current_sign_in_at: "2018-05-04 13:54:06", last_sign_in_at: "2018-05-04 13:50:54", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", username: "kristines", is_admin: true}
+  {email: "klstateler@hotmail.com", password: "Colorado", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 2, current_sign_in_at: "2018-05-04 13:54:06", last_sign_in_at: "2018-05-04 13:50:54", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", username: "kristines", is_admin: true}
 ])
 Place.create!([
   {name: "Fenway Park", street_address: "4 Yawkey Way", city: "Boston", zip: "02155", description: "Fenway Park is a baseball park located in Boston, Massachusetts near Kenmore Square. Since 1912, it has been the home for the Boston Red Sox, the city's American League baseball team, and since 1953, its only Major League Baseball franchise.", category: "4", approved: true, user_id: 1, avatar: "275px-131023-F-PR861-033_Hanscom_participates_in_World_Series_pregame_events.jpg"},
