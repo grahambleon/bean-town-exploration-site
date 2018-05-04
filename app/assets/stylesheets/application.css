@@ -60,20 +60,24 @@ h1{
   text-transform: uppercase;
 }
 
+h3 {
+  text-align: center;
+  color: white;
+}
+
 #home-btn{
   text-align: right;
 }
 
 #flash{
   background: #374e60;
-  color: #DFF1FD;
+  color: white;
 }
 
 h2{
   text-align: center;
   color: #9d0000;
   font-weight: bold;
-  text-shadow: 4px 3px 0px #f5e5e5;
 }
 
 .place-tile-items {
@@ -88,7 +92,11 @@ h2{
   box-shadow: -5px 5px #243440, -5px 5px #243440;
   list-style-type: none;
   display: block;
-  background: #537691;
+  background-color: rgba(55, 78, 96, 0.7)
+}
+
+a .place-tile-items{
+  color: white;
 }
 
 #username {
@@ -205,4 +213,16 @@ border-radius: 10px;
 
 #error_explanation ul li{
 list-style-type: none;
+}
+
+.tile-descrip{
+  font-size: 18px;
+  color: #DFF1FD;
+}
+
+a .tile-link{
+  color: white;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }

@@ -56,9 +56,9 @@ class PlaceList extends React.Component {
      let placeDescrip, placeId, placeLink;
 
      if (place.id === this.state.placeSelected){
-        placeDescrip = place.description
+        placeDescrip = <div className="tile-descrip">{place.description}</div>
         placeId = place.id
-        placeLink = `Click here for reviews and more details on ${place.name}.`
+        placeLink = <div className="tile-link">Click here for reviews and more details on {place.name}.</div>
       }
     let handle = () => {this.handleClick(place.id)}
 
