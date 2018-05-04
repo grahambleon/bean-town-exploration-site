@@ -17,10 +17,10 @@ const Review = (props) => {
 
   return (
     <div>
-      <div>{props.title}</div>
+      <strong><div>{props.title}</div></strong>
       <div>Rating: {rating}</div>
       <div>Date Submitted: {props.date}</div>
-      <div>Description: {props.body}</div>
+      <div>Description: {props.body}</div><br></br>
     </div>
   )
 }
