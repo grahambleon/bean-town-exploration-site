@@ -4,6 +4,6 @@ class Api::V1::PlacesController < ApplicationController
   end
 
   def show
-    render json: { place: Place.find(params[:id]), user_id: current_user.id, reviews: Review.where(place_id: params[:id]) }
+    render json: { place: Place.find(params[:id]), user_id: current_user, reviews: Review.where(place_id: params[:id]) }
   end
 end

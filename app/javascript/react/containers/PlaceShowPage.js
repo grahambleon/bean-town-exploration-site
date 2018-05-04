@@ -20,7 +20,7 @@ class PlaceShowPage extends Component {
 
   componentDidMount() {
     let placeId = this.state.placeId
-    fetch(`/api/v1/places/${placeId}.json`, {
+    fetch(`/api/v1/places/${placeId}`, {
       credentials: 'same-origin'
     })
       .then(response => {
@@ -45,7 +45,7 @@ class PlaceShowPage extends Component {
 
   addNewReview(formPayload) {
     let placeId = this.state.placeId
-    fetch(`/api/v1/places/${placeId}/reviews`, {
+    fetch(`/api/v1/places/${placeId}/.json`, {
       method: 'POST',
       body: JSON.stringify(formPayload),
       credentials: 'same-origin',
@@ -84,6 +84,17 @@ class PlaceShowPage extends Component {
       photos = <img src={this.state.place.avatar.url} />
     }
 
+    let form;
+    if (this.state.userId){
+      form = <FormContainer
+              addNewReview={this.addNewReview}
+              placeId={this.state.place.id}
+              userId={this.state.userId}
+            />
+    }else{
+      form = <h2>Sign in to review this place!</h2>
+    }
+
     return(
       <div>
         <h2>{this.state.place.name}</h2>
@@ -101,15 +112,10 @@ class PlaceShowPage extends Component {
           </div>
         </div>
         <div className="submitted-reviews">
-        <h3>Reviews:</h3>
-          {reviews}
-
-        <FormContainer
-          addNewReview={this.addNewReview}
-          placeId={this.state.place.id}
-          userId={this.state.userId}
-        />
-      </div>
+          <h3>Reviews:</h3>
+            {reviews}
+            {form}
+        </div>
     </div>
     )
   }
