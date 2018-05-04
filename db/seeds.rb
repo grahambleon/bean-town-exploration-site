@@ -1,8 +1,6 @@
-User.destroy_all
 User.create!([
   {email: "klstateler@hotmail.com", password: "Colorado", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 2, current_sign_in_at: "2018-05-04 13:54:06", last_sign_in_at: "2018-05-04 13:50:54", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", username: "kristines", is_admin: true}
 ])
-Place.destroy_all
 Place.create!([
   {name: "Fenway Park", street_address: "4 Yawkey Way", city: "Boston", zip: "02155", description: "Fenway Park is a baseball park located in Boston, Massachusetts near Kenmore Square. Since 1912, it has been the home for the Boston Red Sox, the city's American League baseball team, and since 1953, its only Major League Baseball franchise.", category: "4", approved: true, user_id: 1, remote_avatar_url: "https://s3.us-east-2.amazonaws.com/bostonexplore1234/275px-131023-F-PR861-033_Hanscom_participates_in_World_Series_pregame_events.jpg"},
   {name: "Boston Children's Museum ", street_address: "308 Congress St", city: "Boston", zip: "02110", description: "Boston Children's Museum is a children's museum in Boston, Massachusetts, dedicated to the education of children.", category: "3", approved: true, user_id: 1, remote_avatar_url: "https://s3.us-east-2.amazonaws.com/bostonexplore1234/unnamed.jpg"},
@@ -16,7 +14,6 @@ Place.create!([
   {name: "TD Garden", street_address: "100 Legends Way", city: "Boston", zip: "02114", description: "TD Garden, often called Boston Garden the second or simply, The Garden, is a multi-purpose arena in Boston, Massachusetts. It is named after its sponsor, TD Bank, a subsidiary of Canada's Toronto-Dominion Bank.", category: "4", approved: true, user_id: 1, remote_avatar_url: "https://s3.us-east-2.amazonaws.com/bostonexplore1234/unnamed__2_.jpg"},
   {name: "Matthews Arena", street_address: "238 St Botolph St", city: "Boston", zip: "02115", description: "Matthews Arena, in Boston, Massachusetts, is a basketball and ice hockey arena. It is the oldest indoor ice hockey arena still being used for hockey and is the oldest multi-purpose athletic building still in use in the world.", category: "4", approved: true, user_id: 1, remote_avatar_url: "https://s3.us-east-2.amazonaws.com/bostonexplore1234/unnamed__3_.jpg"}
 ])
-Review.destroy_all
 Review.create!([
   {title: "To much walking", body: "Very informational but the tour guides expected me to walk everywhere.....UGH", rating: 2, place_id: 5, user_id: 1},
   {title: "I learned so much!!!", body: "Great way to get around - just follow the path! Real easy and takes to you some great spots. If I was to do it again, I'd start at the end and work my way back into the city. Suggest subway and short walk out to the memorial and follow the route back in. This would lead you to a decent pit stop at Quincy then ending up at the park for ice cream. We had a cheeky lunch stop in little Italy, which was a treat and recommended.", rating: 5, place_id: 5, user_id: 1},
