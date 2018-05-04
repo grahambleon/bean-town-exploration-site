@@ -45,7 +45,7 @@ class PlaceShowPage extends Component {
 
   addNewReview(formPayload) {
     let placeId = this.state.placeId
-    fetch(`/api/v1/places/${placeId}/.json`, {
+    fetch(`/api/v1/places/${placeId}/reviews.json`, {
       method: 'POST',
       body: JSON.stringify(formPayload),
       credentials: 'same-origin',
